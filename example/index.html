@@ -49,5 +49,34 @@
   <div id="main"></div>
   <script src="../node_modules/babel-standalone/babel.js"></script>
   <script type="text/babel" src="renderer.js"></script>
+  <script type="x-template" id="content">
+    <div class="container">
+      <div @mousedown="togglePause" class="player">
+        <vue-mpv
+          :styles="styles"
+          :on-ready="onReady"
+          :on-property-change="handlePropertyChange">
+        </vue-mpv>
+      </div>
+      <div class="controls">
+        <button class="control" @click="togglePause">
+          {{pause ? "▶" : "❚❚"}}
+        </button>
+        <button class="control" @click="handleStop">■</button>
+        <input
+          @mousedown="handleSeekMouseDown"
+          @mouseup="handleSeekMouseUp"
+          @change="handleSeek"
+          class="seek"
+          min="0"
+          step="0.1"
+          type="range"
+          v-bind:max="duration"
+          v-bind:value="timePos"
+        />
+        <button class="control" @click="handleLoad">⏏</button>
+      </div>
+    </div>
+  </script>
 </body>
 </html>

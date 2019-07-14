@@ -33,11 +33,10 @@
     "url": "https://github.com/Kagami/mpv.js/issues"
   },
   "dependencies": {
-    "prebuild-install": "^5.0.0",
-    "prop-types": "^15.6.2"
+    "prebuild-install": "^5.0.0"
   },
   "peerDependencies": {
-    "react": "^15.3.0 || ^16.0.0"
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "babel-standalone": "^6.26.0",
@@ -46,7 +45,6 @@
     "eslint": "^5.2.0",
     "eslint-plugin-react": "^7.10.0",
     "prebuild": "^7.6.1",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "vue": "^2.6.10"
   }
 }
