@@ -1,7 +1,7 @@
 "use strict";
 
 const path = require("path");
-const Vue = require("vue");
+const Vue = require("vue").default;
 
 
 /**
